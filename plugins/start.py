@@ -16,7 +16,7 @@ from helper.utils import (
 async def handle_start(bot: Client, message: Message):
     SnowDev = await message.reply_text(text="**Please Wait...**", reply_to_message_id=message.id)
     await db.add_user(b=bot, m=message)
-    text = f"Hi, {message.from_user.mention}\n\n I'm Auto Accept Bot I can accpet new user from any channel and group just make me admin there. \n\n For pending_old join request accept, please contact my owner👇🏻\n@HAPPY_T0_HELP"
+    text = f"Hi, {message.from_user.mention}\n\n I'm Auto Accept Bot I can accpet new user from any channel and group just make me admin there with all permission. \n\n For pending_old join request accept, please contact my owner👇🏻\n@HAPPY_T0_HELP \n\n𝗜𝗳 𝗬𝗼𝘂 𝗪𝗮𝗻𝘁 𝗔𝗻𝘆 𝗣𝗲𝗿𝘀𝗼𝗻𝗮𝗹 𝗕𝗼𝘁( 𝗼𝗳𝗰𝗼𝘂𝗿𝘀𝗲 𝗣𝗮𝗶𝗱) , 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗺𝗲 𝗵𝗲𝗿𝗲 @HAPPY_T0_HELP"
     reply_markup = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton(text="OWNER 👨‍💻", url="https://t.me/HAPPY_T0_HELP")],
