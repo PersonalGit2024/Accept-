@@ -16,10 +16,10 @@ from helper.utils import (
 async def handle_start(bot: Client, message: Message):
     SnowDev = await message.reply_text(text="**Please Wait...**", reply_to_message_id=message.id)
     await db.add_user(b=bot, m=message)
-    text = f"Hi, {message.from_user.mention}\n\n I'm Auto Accept Bot I can accpet user from any channel and group just make me admin there."
+    text = f"Hi, {message.from_user.mention}\n\n I'm Auto Accept Bot I can accpet new user from any channel and group just make me admin there. \n\n For pending_old join request accept, please contact my owner👇🏻\n@HAPPY_T0_HELP"
     reply_markup = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ 👨‍💻", url="https://t.me/Snowball_Official")],
+            [InlineKeyboardButton(text="OWNER 👨‍💻", url="https://t.me/HAPPY_T0_HELP")],
             [InlineKeyboardButton("ʜᴇʟᴘ ❗", callback_data="help")],
         ]
     )
@@ -29,12 +29,12 @@ async def handle_start(bot: Client, message: Message):
             await message.reply_photo(photo=Config.START_PIC, caption=text, reply_markup=reply_markup)
         else:
             await SnowDev.delete()
-            await message.reply_photo(photo=Config.START_PIC, caption=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ 👨‍💻", url="https://t.me/Snowball_Official")]]))
+            await message.reply_photo(photo=Config.START_PIC, caption=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ 👨‍💻", url="https://t.me/HAPPY_T0_HELP")]]))
     else:
         if message.from_user.id == Config.ADMIN:
             await SnowDev.edit(text=text, reply_markup=reply_markup)
         else:
-            await SnowDev.edit(text=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ 👨‍💻", url="https://t.me/Snowball_Official")]]))
+            await SnowDev.edit(text=text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ 👨‍💻", url="https://t.me/HAPPY_T0_HELP")]]))
 
 
 @Client.on_message(filters.private & filters.command("set_welcome") & filters.user(Config.ADMIN))
