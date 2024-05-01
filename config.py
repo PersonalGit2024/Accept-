@@ -33,6 +33,19 @@ class Config(object):
 class TxT(object):
 
     HELP_MSG = """
+
+ I'm Auto TG Join Requests Approval Bot. 
+ I can also APPROVE TG Pending Join Requests.
+
+1. How to Accept Join requests:
+
+  👉Simply add me in you channel or group as admin with all permission.
+
+2. How to accept all pending join requests:
+
+  👉Fist add me(Bot) as admin with all permission in you channel or group,
+  👉Then contact me @HAPPY_T0_HELP
+
 <b> ADMIN Available commands:- </b>
 
 ➜ /set_welcome - To set custom welcome message (support photo & video & animation or gif)
